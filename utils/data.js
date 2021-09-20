@@ -12,4 +12,6 @@ const data={
             description:'' 
         }
     ]
-}
+};
+
+export default data;

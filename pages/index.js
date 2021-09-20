@@ -1,21 +1,25 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Layout from '../components/Layout'
 
 export default function Home() {
   return (
-    <div >
-      <Head>
-     
-      </Head>
-
-      <main >
-
-      </main>
-
-      <footer >
+    <Layout>
+      <div >
+        <Head>
       
-      </footer>
-    </div>
+        </Head>
+ 
+        <main >
+
+        </main>
+
+        <footer >
+        
+        </footer>
+      </div>
+    </Layout>
+    
   )
 }
