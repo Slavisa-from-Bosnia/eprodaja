@@ -1,4 +1,4 @@
-import ServerSideSheets from '@material-ui/core/styles';
+import { ServerStyleSheets } from '@material-ui/styles';
 import Document, {Html, Head, Main, NextScript } from 'next/document';
 import React from 'react';
 
@@ -6,12 +6,11 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="en">
-                <Head>
-                    <body>
-                        <Main/>
-                        <NextScript/>
-                    </body>
-                </Head>
+                <Head/>
+                <body>
+                    <Main/>
+                    <NextScript/>
+                </body>
             </Html>
            
         )
@@ -19,7 +18,7 @@ export default class MyDocument extends Document {
 }
 
 MyDocument.getInitialProps=async(ctx)=>{
-    const sheets=new ServerSideSheets();
+    const sheets = new ServerStyleSheets();
     const originalRenderPages=ctx.renderPages;
     ctx.renderPages=()=>{
         return originalRenderPages({
