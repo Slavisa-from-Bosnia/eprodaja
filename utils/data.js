@@ -2,6 +2,7 @@ const data={
     products: [
         {
             name:'Prva ruža',
+            slug:'prva-ruža',
             category:'cvijeće',
             image:'/images/ruza1.jpg',
             price:'10',
@@ -13,6 +14,7 @@ const data={
         },
         {
             name:'Druga ruža',
+            slug: 'druga-ruža',
             category:'cvijeće',
             image:'/images/ruza2.jpg',
             price:'10',
@@ -24,6 +26,7 @@ const data={
         },
         {
             name:'Treća ruža',
+            slug:'treća-ruža',
             category:'cvijeće',
             image:'/images/ruza3.jpg',
             price:'10',
@@ -35,6 +38,7 @@ const data={
         },
         {
             name:'Četvrta ruža',
+            slug:'četvrta-ruža',
             category:'cvijeće',
             image:'/images/ruza4.jpg',
             price:'10',
@@ -46,6 +50,7 @@ const data={
         },
         {
             name:'Peta ruža',
+            slug:'peta-ruža',
             category:'cvijeće',
             image:'',
             price:'10',
