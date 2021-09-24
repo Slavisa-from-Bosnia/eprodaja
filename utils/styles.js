@@ -23,6 +23,7 @@ const useStyles = makeStyles({
     },
 
     footer: {
+        marginTop: 10,
         textAling: 'center'
     },
 

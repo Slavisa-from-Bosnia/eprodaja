@@ -4,7 +4,7 @@ import data from '../../utils/data';
 import Layout from '../../components/Layout';
 import NextLink from 'next/link';
 import Image from 'next/image';
-import {Link, Grid, List, ListItem, Typography, Card } from '@material-ui/core';
+import {Link, Grid, List, ListItem, Typography, Card, Button } from '@material-ui/core';
 import { mergeClasses } from '@material-ui/styles';
 import useStyles from '../../utils/styles';
 
@@ -17,7 +17,7 @@ export default function ProductScreen() {
         return<div>Product Not Found</div>
     }
     return (
-        <Layout title={product.name}>
+        <Layout title={product.name} description={product.description}>
             <div className={classes.section}> 
                 <NextLink href="/" passHref>
                     <Link>
@@ -39,7 +39,7 @@ export default function ProductScreen() {
                 <Grid item md={3} xs={12}> 
                     <List>
                         <ListItem>
-                            <Typography>Category: {product.category}</Typography> 
+                            <Typography component="h1" variant="h1">{product.name}</Typography> 
                         </ListItem> 
                         <ListItem>
                             <Typography>Brand: {product.brand}</Typography>
@@ -57,21 +57,33 @@ export default function ProductScreen() {
                         <List>
                             <ListItem>
                                 <Grid container>
-                                    <Grid item>
+                                    <Grid item xs={6}>
                                         <Typography>Price</Typography>
                                     </Grid>
-                                    <Grid item>
+                                    <Grid item xs={6}>
                                         <Typography>${product.price}</Typography>
                                     </Grid>
-                                        
                                 </Grid>
-
+                            </ListItem>
+                            <ListItem>
+                                <Grid container>
+                                    <Grid item xs={6}>
+                                        <Typography>Status</Typography>
+                                    </Grid>
+                                    <Grid item xs={6}>
+                                        <Typography>${product.countInStock > 0 ? 'Instock' :'Unavailable'}</Typography>
+                                    </Grid>
+                                </Grid>
+                            </ListItem>
+                            <ListItem>
+                                <Button fullWidth variant="contained" color="primary">
+                                    Add to chart
+                                </Button>
                             </ListItem>
                         </List>
                     </Card>
                 </Grid>
             </Grid>
-
         </Layout>
     ) 
 }
